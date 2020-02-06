@@ -23,5 +23,12 @@ public class VendingMachine {
     public void stockItem(Item item){
         this.inventory.add(item);
     }
+    public void acceptCoin(Coin coin){
+        if(coin.getDenomination() != "1p" && coin.getDenomination() != "2p"){
+            this.coins.add(coin);
+        }
+
+
+    }
 
 }
