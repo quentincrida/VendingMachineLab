@@ -20,5 +20,8 @@ public class VendingMachine {
     public int countCoins(){
         return this.coins.size();
     }
+    public void stockItem(Item item){
+        this.inventory.add(item);
+    }
 
 }
