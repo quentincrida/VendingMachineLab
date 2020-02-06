@@ -1,3 +1,5 @@
+package money;
+
 public enum Pence {
     ONEPENCE(0.01,"1p"),
     TWOPENCE(0.02, "2p"),

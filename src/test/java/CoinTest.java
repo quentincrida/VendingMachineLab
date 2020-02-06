@@ -1,3 +1,5 @@
+import money.Coin;
+import money.Pence;
 import org.junit.Before;
 import org.junit.Test;
 

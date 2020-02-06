@@ -1,3 +1,5 @@
+package vendingItems;
+
 public class Sweets extends Item {
 
     private String productName;

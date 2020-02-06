@@ -1,3 +1,5 @@
+package money;
+
 public class Coin {
     private Pence value;
 

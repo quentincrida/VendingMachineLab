@@ -1,3 +1,5 @@
+package vendingItems;
+
 public class Crisps extends Item {
 
     private final double price;

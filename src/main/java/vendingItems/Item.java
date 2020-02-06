@@ -1,3 +1,5 @@
+package vendingItems;
+
 public abstract class Item {
 
     private String brand;

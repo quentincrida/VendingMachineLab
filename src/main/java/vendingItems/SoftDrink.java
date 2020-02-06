@@ -1,3 +1,5 @@
+package vendingItems;
+
 public class SoftDrink extends Item {
     private String flavour;
     private final double price;
