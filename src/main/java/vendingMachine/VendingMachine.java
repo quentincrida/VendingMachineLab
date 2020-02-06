@@ -28,7 +28,13 @@ public class VendingMachine {
             this.coins.add(coin);
         }
 
-
+    }
+    public double getCurrentTotal(){
+        double currentTotal = 0;
+        for(Coin coin : this.coins) {
+            currentTotal += coin.getValue();
+        }
+       return currentTotal;
     }
 
 }

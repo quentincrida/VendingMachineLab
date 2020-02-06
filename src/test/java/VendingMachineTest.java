@@ -46,4 +46,9 @@ public class VendingMachineTest {
         vendingMachine.acceptCoin(coin2);
         assertEquals(0, vendingMachine.countCoins());
     }
+    @Test
+    public void canGetCurrentTotal(){
+        vendingMachine.acceptCoin(coin1);
+        assertEquals(0.05, vendingMachine.getCurrentTotal(), 0.01);
+    }
 }
