@@ -90,4 +90,13 @@ public class VendingMachineTest {
         assertNull(item);
 
     }
+    @Test
+    public void canClearCoinsArrayList(){
+        vendingMachine.acceptCoin(coin1);
+        vendingMachine.acceptCoin(coin2);
+        vendingMachine.acceptCoin(coin3);
+        vendingMachine.clearCurrentTotal();
+        assertEquals(0, vendingMachine.getCurrentTotal(), 0.01);
+        assertEquals(0, vendingMachine.countCoins());
+    }
 }

@@ -49,9 +49,13 @@ public class VendingMachine {
     public Item dispenseProduct(String position){
         Item item = getProductByPosition(position);
         if(item != null && item.getPrice() <= getCurrentTotal()){
+            clearCurrentTotal();
             return item;
         }
         return null;
     }
 
+    public void clearCurrentTotal() {
+        this.coins.clear();
+    }
 }
