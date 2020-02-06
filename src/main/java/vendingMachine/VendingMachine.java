@@ -1,7 +1,10 @@
 package vendingMachine;
 
 import money.Coin;
+import vendingItems.Crisps;
 import vendingItems.Item;
+import vendingItems.SoftDrink;
+import vendingItems.Sweets;
 
 import java.util.ArrayList;
 
@@ -12,6 +15,13 @@ public class VendingMachine {
     public VendingMachine() {
         this.inventory = new ArrayList<>();
         this.coins = new ArrayList<>();
+        Crisps crisps = new Crisps("Walkers", Position.B2, "Cheese & Vinegar");
+        SoftDrink softdrink = new SoftDrink("Barr's", Position.A3, "Irn Bru");
+        Sweets sweets = new Sweets("Nestle", Position.C3, "Aero");
+        this.inventory.add(crisps);
+        this.inventory.add(softdrink);
+        this.inventory.add(sweets);
+
     }
 
     public int countItems(){

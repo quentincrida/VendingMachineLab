@@ -26,10 +26,7 @@ public class VendingMachineTest {
         coin3 = new Coin(Pence.ONEPOUND);
 
     }
-    @Test
-    public void checkStartsEmpty(){
-        assertEquals(0, vendingMachine.countItems());
-    }
+
     @Test
     public void checkCoinsStartEmpty(){
         assertEquals(0, vendingMachine.countCoins());
@@ -37,7 +34,7 @@ public class VendingMachineTest {
     @Test
     public void canStockMachine(){
         vendingMachine.stockItem(softDrink);
-        assertEquals(1, vendingMachine.countItems());
+        assertEquals(4, vendingMachine.countItems());
 
     }
     @Test
