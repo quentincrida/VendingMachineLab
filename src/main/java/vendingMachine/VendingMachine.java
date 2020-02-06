@@ -46,4 +46,12 @@ public class VendingMachine {
         return null;
     }
 
+    public Item dispenseProduct(String position){
+        Item item = getProductByPosition(position);
+        if(item != null && item.getPrice() <= getCurrentTotal()){
+            return item;
+        }
+        return null;
+    }
+
 }
