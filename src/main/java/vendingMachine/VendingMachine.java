@@ -37,4 +37,13 @@ public class VendingMachine {
        return currentTotal;
     }
 
+    public Item getProductByPosition(String position){
+        for(Item item : this.inventory) {
+            if(item.getPosition() == position){
+                return item;
+            }
+        }
+        return null;
+    }
+
 }

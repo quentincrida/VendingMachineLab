@@ -1,6 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 import vendingItems.SoftDrink;
+import vendingMachine.Position;
 
 import static org.junit.Assert.assertEquals;
 
@@ -10,7 +11,7 @@ public class SoftDrinkTest {
 
     @Before
     public void before(){
-        softDrink = new SoftDrink("Coca Cola", "Classic");
+        softDrink = new SoftDrink("Coca Cola", Position.A2,"Classic");
     }
 
     @Test

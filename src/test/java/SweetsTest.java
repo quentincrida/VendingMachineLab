@@ -1,6 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 import vendingItems.Sweets;
+import vendingMachine.Position;
 
 import static org.junit.Assert.assertEquals;
 
@@ -10,7 +11,7 @@ public class SweetsTest {
 
     @Before
     public void before(){
-        sweets = new Sweets("Cadbury", "Dairy Milk");
+        sweets = new Sweets("Cadbury", Position.A1, "Dairy Milk");
 
     }
 
@@ -25,5 +26,9 @@ public class SweetsTest {
     @Test
     public void getPrice(){
         assertEquals(0.65, sweets.getPrice(), 0.01);
+    }
+    @Test
+    public void getPosition(){
+        assertEquals("A1", sweets.getPosition());
     }
 }

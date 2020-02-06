@@ -2,7 +2,9 @@ import money.Coin;
 import money.Pence;
 import org.junit.Before;
 import org.junit.Test;
+import vendingItems.Item;
 import vendingItems.SoftDrink;
+import vendingMachine.Position;
 import vendingMachine.VendingMachine;
 
 import static org.junit.Assert.assertEquals;
@@ -16,7 +18,7 @@ public class VendingMachineTest {
     @Before
     public void before(){
         vendingMachine = new VendingMachine();
-        softDrink = new SoftDrink("Pepsi", "Max");
+        softDrink = new SoftDrink("Pepsi", Position.B1,"Max");
         coin1 = new Coin(Pence.FIVEPENCE);
         coin2 = new Coin(Pence.TWOPENCE);
 
@@ -50,5 +52,14 @@ public class VendingMachineTest {
     public void canGetCurrentTotal(){
         vendingMachine.acceptCoin(coin1);
         assertEquals(0.05, vendingMachine.getCurrentTotal(), 0.01);
+    }
+
+    @Test
+
+    public void getProductByPosition(){
+        vendingMachine.stockItem(softDrink);
+        Item item = vendingMachine.getProductByPosition("B1");
+        assertEquals(softDrink, item);
+
     }
 }
